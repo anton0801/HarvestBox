@@ -6,7 +6,23 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8FD3727C2EF07A4C009D7590 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8FD3727B2EF07A4C009D7590 /* FirebaseAnalytics */; };
+		8FD3727E2EF07A4C009D7590 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 8FD3727D2EF07A4C009D7590 /* FirebaseMessaging */; };
+		8FD372812EF07ABF009D7590 /* AppsFlyerLib in Frameworks */ = {isa = PBXBuildFile; productRef = 8FD372802EF07ABF009D7590 /* AppsFlyerLib */; };
+		8FD372842EF07AE2009D7590 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 8FD372832EF07AE2009D7590 /* Lottie */; };
+		8FD372932EF07B53009D7590 /* ApplicationNotificationServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8FD3728C2EF07B53009D7590 /* ApplicationNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8FD3729B2EF07B63009D7590 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 8FD3729A2EF07B63009D7590 /* FirebaseMessaging */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
+		8FD372912EF07B53009D7590 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 956FBFDB2EDF2784008FD178 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8FD3728B2EF07B53009D7590;
+			remoteInfo = ApplicationNotificationServiceExtension;
+		};
 		956FBFF12EDF2786008FD178 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 956FBFDB2EDF2784008FD178 /* Project object */;
@@ -23,15 +39,58 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8FD372982EF07B53009D7590 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8FD372932EF07B53009D7590 /* ApplicationNotificationServiceExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		8FD3728C2EF07B53009D7590 /* ApplicationNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ApplicationNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		956FBFE32EDF2784008FD178 /* HelpFarmers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelpFarmers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		956FBFF02EDF2786008FD178 /* HelpFarmersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelpFarmersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		956FBFFA2EDF2786008FD178 /* HelpFarmersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelpFarmersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		8FD372872EF07AEB009D7590 /* Exceptions for "HelpFarmers" folder in "HelpFarmers" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 956FBFE22EDF2784008FD178 /* HelpFarmers */;
+		};
+		8FD372972EF07B53009D7590 /* Exceptions for "ApplicationNotificationServiceExtension" folder in "ApplicationNotificationServiceExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 8FD3728B2EF07B53009D7590 /* ApplicationNotificationServiceExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		8FD3728D2EF07B53009D7590 /* ApplicationNotificationServiceExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				8FD372972EF07B53009D7590 /* Exceptions for "ApplicationNotificationServiceExtension" folder in "ApplicationNotificationServiceExtension" target */,
+			);
+			path = ApplicationNotificationServiceExtension;
+			sourceTree = "<group>";
+		};
 		956FBFE52EDF2784008FD178 /* HelpFarmers */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				8FD372872EF07AEB009D7590 /* Exceptions for "HelpFarmers" folder in "HelpFarmers" target */,
+			);
 			path = HelpFarmers;
 			sourceTree = "<group>";
 		};
@@ -53,10 +112,22 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8FD372892EF07B53009D7590 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FD3729B2EF07B63009D7590 /* FirebaseMessaging in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		956FBFE02EDF2784008FD178 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FD3727E2EF07A4C009D7590 /* FirebaseMessaging in Frameworks */,
+				8FD3727C2EF07A4C009D7590 /* FirebaseAnalytics in Frameworks */,
+				8FD372812EF07ABF009D7590 /* AppsFlyerLib in Frameworks */,
+				8FD372842EF07AE2009D7590 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +148,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8FD372992EF07B63009D7590 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		956FBFDA2EDF2784008FD178 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +162,8 @@
 				956FBFE52EDF2784008FD178 /* HelpFarmers */,
 				956FBFF32EDF2786008FD178 /* HelpFarmersTests */,
 				956FBFFD2EDF2786008FD178 /* HelpFarmersUITests */,
+				8FD3728D2EF07B53009D7590 /* ApplicationNotificationServiceExtension */,
+				8FD372992EF07B63009D7590 /* Frameworks */,
 				956FBFE42EDF2784008FD178 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,6 +174,7 @@
 				956FBFE32EDF2784008FD178 /* HelpFarmers.app */,
 				956FBFF02EDF2786008FD178 /* HelpFarmersTests.xctest */,
 				956FBFFA2EDF2786008FD178 /* HelpFarmersUITests.xctest */,
+				8FD3728C2EF07B53009D7590 /* ApplicationNotificationServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,6 +182,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8FD3728B2EF07B53009D7590 /* ApplicationNotificationServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FD372942EF07B53009D7590 /* Build configuration list for PBXNativeTarget "ApplicationNotificationServiceExtension" */;
+			buildPhases = (
+				8FD372882EF07B53009D7590 /* Sources */,
+				8FD372892EF07B53009D7590 /* Frameworks */,
+				8FD3728A2EF07B53009D7590 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				8FD3728D2EF07B53009D7590 /* ApplicationNotificationServiceExtension */,
+			);
+			name = ApplicationNotificationServiceExtension;
+			packageProductDependencies = (
+				8FD3729A2EF07B63009D7590 /* FirebaseMessaging */,
+			);
+			productName = ApplicationNotificationServiceExtension;
+			productReference = 8FD3728C2EF07B53009D7590 /* ApplicationNotificationServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		956FBFE22EDF2784008FD178 /* HelpFarmers */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 956FC0042EDF2786008FD178 /* Build configuration list for PBXNativeTarget "HelpFarmers" */;
@@ -108,10 +212,12 @@
 				956FBFDF2EDF2784008FD178 /* Sources */,
 				956FBFE02EDF2784008FD178 /* Frameworks */,
 				956FBFE12EDF2784008FD178 /* Resources */,
+				8FD372982EF07B53009D7590 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8FD372922EF07B53009D7590 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				956FBFE52EDF2784008FD178 /* HelpFarmers */,
@@ -119,6 +225,10 @@
 			);
 			name = HelpFarmers;
 			packageProductDependencies = (
+				8FD3727B2EF07A4C009D7590 /* FirebaseAnalytics */,
+				8FD3727D2EF07A4C009D7590 /* FirebaseMessaging */,
+				8FD372802EF07ABF009D7590 /* AppsFlyerLib */,
+				8FD372832EF07AE2009D7590 /* Lottie */,
 			);
 			productName = HelpFarmers;
 			productReference = 956FBFE32EDF2784008FD178 /* HelpFarmers.app */;
@@ -177,9 +287,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 2610;
+				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 2610;
 				TargetAttributes = {
+					8FD3728B2EF07B53009D7590 = {
+						CreatedOnToolsVersion = 16.4;
+					};
 					956FBFE22EDF2784008FD178 = {
 						CreatedOnToolsVersion = 26.1.1;
 					};
@@ -202,6 +315,11 @@
 			);
 			mainGroup = 956FBFDA2EDF2784008FD178;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				8FD3727A2EF07A4C009D7590 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				8FD3727F2EF07ABF009D7590 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */,
+				8FD372822EF07AE2009D7590 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 956FBFE42EDF2784008FD178 /* Products */;
 			projectDirPath = "";
@@ -210,11 +328,19 @@
 				956FBFE22EDF2784008FD178 /* HelpFarmers */,
 				956FBFEF2EDF2786008FD178 /* HelpFarmersTests */,
 				956FBFF92EDF2786008FD178 /* HelpFarmersUITests */,
+				8FD3728B2EF07B53009D7590 /* ApplicationNotificationServiceExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8FD3728A2EF07B53009D7590 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		956FBFE12EDF2784008FD178 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -239,6 +365,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8FD372882EF07B53009D7590 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		956FBFDF2EDF2784008FD178 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -263,6 +396,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		8FD372922EF07B53009D7590 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8FD3728B2EF07B53009D7590 /* ApplicationNotificationServiceExtension */;
+			targetProxy = 8FD372912EF07B53009D7590 /* PBXContainerItemProxy */;
+		};
 		956FBFF22EDF2786008FD178 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 956FBFE22EDF2784008FD178 /* HelpFarmers */;
@@ -276,6 +414,66 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		8FD372952EF07B53009D7590 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ApplicationNotificationServiceExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ApplicationNotificationServiceExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.helpharvestb.HarvestBox.ApplicationNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		8FD372962EF07B53009D7590 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ApplicationNotificationServiceExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ApplicationNotificationServiceExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.helpharvestb.HarvestBox.ApplicationNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 		956FC0022EDF2786008FD178 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -402,23 +600,28 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HelpFarmers/HelpFarmers.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7X47AV9RN8;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HelpFarmers/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Harvest Box";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need your permission for use your camera.";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Harvest Box may use limited device-related information to ensure the app runs smoothly and reliably. This data helps us detect technical issues, improve core features, and understand how the app is used. We do not use this information to identify you personally, track your activity across other apps, or share data with third parties for external advertising.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.helpharvestb.HarvestBox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -440,23 +643,28 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HelpFarmers/HelpFarmers.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7X47AV9RN8;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HelpFarmers/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Harvest Box";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need your permission for use your camera.";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Harvest Box may use limited device-related information to ensure the app runs smoothly and reliably. This data helps us detect technical issues, improve core features, and understand how the app is used. We do not use this information to identify you personally, track your activity across other apps, or share data with third parties for external advertising.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.helpharvestb.HarvestBox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -560,6 +768,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8FD372942EF07B53009D7590 /* Build configuration list for PBXNativeTarget "ApplicationNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FD372952EF07B53009D7590 /* Debug */,
+				8FD372962EF07B53009D7590 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		956FBFDE2EDF2784008FD178 /* Build configuration list for PBXProject "HelpFarmers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -597,6 +814,61 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8FD3727A2EF07A4C009D7590 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.7.0;
+			};
+		};
+		8FD3727F2EF07ABF009D7590 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppsFlyerSDK/AppsFlyerFramework";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.17.8;
+			};
+		};
+		8FD372822EF07AE2009D7590 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8FD3727B2EF07A4C009D7590 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8FD3727A2EF07A4C009D7590 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		8FD3727D2EF07A4C009D7590 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8FD3727A2EF07A4C009D7590 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		8FD372802EF07ABF009D7590 /* AppsFlyerLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8FD3727F2EF07ABF009D7590 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */;
+			productName = AppsFlyerLib;
+		};
+		8FD372832EF07AE2009D7590 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8FD372822EF07AE2009D7590 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		8FD3729A2EF07B63009D7590 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8FD3727A2EF07A4C009D7590 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 956FBFDB2EDF2784008FD178 /* Project object */;
 }

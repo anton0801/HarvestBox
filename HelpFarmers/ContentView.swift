@@ -1,21 +1,31 @@
-//
-//  ContentView.swift
-//  HelpFarmers
-//
-//  Created by Stepan Yarikova on 2/12/25.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var manager = InventoryManager()
+    @State private var showTutorial = false
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            MainTabView()
+                .environmentObject(manager)
+                .preferredColorScheme(.light)
+                .tint(.accent)
+                .onAppear {
+                    UIScrollView.appearance().backgroundColor = UIColor(Color.background)
+                    UITableView.appearance().backgroundColor = UIColor(Color.background)
+                    UITableViewCell.appearance().backgroundColor = UIColor.clear
+                    UITableView.appearance().separatorStyle = .none
+                    
+                    if manager.items.isEmpty {
+                        showTutorial = true
+                    }
+                }
+                .sheet(isPresented: $showTutorial) {
+                    TutorialView {
+                        showTutorial = false
+                    }
+                }
         }
-        .padding()
     }
 }
 
