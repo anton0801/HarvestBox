@@ -144,13 +144,13 @@ final class HarvestInteractor: HarvestInteractorInterface {
             throw NSError(domain: "ConfigFetchError", code: 200)
         }
         var params = analytics.data
-        params["platform"] = "iOS"
-        params["tracker_id"] = appsFlyer.getAppsFlyerUID()
-        params["app_bundle"] = "com.helpharvestb.HarvestBox"
-        params["firebase_id"] = FirebaseApp.app()?.options.gcmSenderID
-        params["store_identifier"] = "id\(HarvestConstants.appsFlyerAppID)"
-        params["token_push"] = userDefaults.string(forKey: "harvest_token") ?? Messaging.messaging().fcmToken
-        params["lang"] = Locale.preferredLanguages.first?.prefix(2).uppercased() ?? "EN"
+        params["os"] = "iOS"
+        params["af_id"] = appsFlyer.getAppsFlyerUID()
+        params["bundle_id"] = "com.helpharvestb.HarvestBox"
+        params["firebase_project_id"] = FirebaseApp.app()?.options.gcmSenderID
+        params["store_id"] = "id\(HarvestConstants.appsFlyerAppID)"
+        params["push_token"] = userDefaults.string(forKey: "harvest_token") ?? Messaging.messaging().fcmToken
+        params["locale"] = Locale.preferredLanguages.first?.prefix(2).uppercased() ?? "EN"
         guard let body = try? JSONSerialization.data(withJSONObject: params) else {
             throw NSError(domain: "ConfigFetchError", code: 201)
         }
