@@ -339,7 +339,7 @@ struct HarvestMainView: View {
     
     private func initHarvestLink() {
         let tempHarvest = UserDefaults.standard.string(forKey: "temp_url")
-        let storedHarvest = UserDefaults.standard.string(forKey: "harvest_config") ?? ""
+        let storedHarvest = UserDefaults.standard.string(forKey: "stored_path") ?? ""
         activeHarvestLink = tempHarvest ?? storedHarvest
         
         if tempHarvest != nil {

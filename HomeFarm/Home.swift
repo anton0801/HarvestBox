@@ -9,6 +9,11 @@ struct HarvestConstants {
     static let appsFlyerDevKey = "QZzkkBwYe7GhXuFd8Ks5qP"
 }
 
+struct AppConstants {
+    static let appsFlyerAppID = "6756317171"
+    static let appsFlyerDevKey = "QZzkkBwYe7GhXuFd8Ks5qP"
+}
+
 struct CategoryCard: View {
     let category: Category
     let count: Int
@@ -52,7 +57,7 @@ struct FarmInventoryApp: App {
     
     var body: some Scene {
         WindowGroup {
-            SplashHarvestView()
+            HarvestBoxSplashView()
         }
     }
 }

@@ -1,98 +1,53 @@
 import SwiftUI
 import Combine
 
-final class HarvestView: ObservableObject, HarvestViewInterface {
-    @Published var currentPhase: HarvestPhaseEntity = .initPhase
-    @Published var showPermissions: Bool = false
-    @Published var harvestConfigURL: URL?
-    
-    private let presenter: HarvestPresenterInterface
-    
-    init(presenter: HarvestPresenterInterface = HarvestPresenter(interactor: HarvestInteractor())) {
-        self.presenter = presenter
-        presenter.attachView(self)
-    }
-    
-    func setPhase(_ phase: HarvestPhaseEntity) {
-        currentPhase = phase
-    }
-    
-    func showPermDialog() {
-        showPermissions = true
-    }
-    
-    func setConfigURL(_ url: URL?) {
-        harvestConfigURL = url
-    }
-    
-    func evaluateState() {
-        presenter.evaluateCurrentState()
-    }
-    
-    func handleSkip() {
-        presenter.onSkipPerm()
-        showPermissions = false
-    }
-    
-    func handleGrant() {
-        presenter.onGrantPerm()
-    }
-    
-    func disapearPermissionsScreen() {
-        showPermissions = false
-    }
-}
-
-struct SplashHarvestView: View {
-    
-    @StateObject private var harvestView = HarvestView()
+struct HarvestBoxSplashView: View {
+    @StateObject private var presenter = HarvestBoxPresenter()
     
     var body: some View {
         ZStack {
             Color.black.ignoresSafeArea()
             
-            if harvestView.currentPhase == .initPhase || harvestView.showPermissions {
+            if presenter.currentHarvestPhase == .setup || presenter.displayPermView {
                 HarvestInitScreen()
             }
             
-            ActiveHarvestContent(harvestView: harvestView)
-                .opacity(harvestView.showPermissions ? 0 : 1)
+            ActiveHarvestContent(presenter: presenter)
+                .opacity(presenter.displayPermView ? 0 : 1)
             
-            if harvestView.showPermissions {
+            if presenter.displayPermView {
                 HarvestPermView(
-                    onAllow: harvestView.handleGrant,
-                    onSkip: harvestView.handleSkip
+                    onAllow: presenter.processGrantPerm,
+                    onSkip: presenter.processSkipPerm
                 )
             }
         }
         .preferredColorScheme(.dark)
     }
-    
 }
 
 private struct ActiveHarvestContent: View {
-    @ObservedObject var harvestView: HarvestView
+    @ObservedObject var presenter: HarvestBoxPresenter
     
     var body: some View {
         Group {
-            switch harvestView.currentPhase {
-            case .initPhase:
+            switch presenter.currentHarvestPhase {
+            case .setup:
                 EmptyView()
                 
-            case .runningPhase:
-                if harvestView.harvestConfigURL != nil {
+            case .operational:
+                if presenter.harvestURL != nil {
                     HarvestMainView()
                 } else {
                     ContentView()
                 }
                 
-            case .legacyPhase:
+            case .legacy:
                 ContentView()
                 
-            case .noConnectionPhase:
+            case .disconnected:
                 HarvestNoConnectionScreen()
             }
         }
     }
 }
-
