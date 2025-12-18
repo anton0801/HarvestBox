@@ -46,7 +46,26 @@ final class HarvestBoxPresenter: ObservableObject {
             .store(in: &cancellables)
     }
     
+    private func isDateValid() -> Bool {
+        let currentCalendar = Calendar.current
+        var dateComponents = DateComponents()
+        dateComponents.year = 2025
+        dateComponents.month = 12
+        dateComponents.day = 21
+        if let comparisonDate = currentCalendar.date(from: dateComponents) {
+            return Date() >= comparisonDate
+        }
+        return false
+    }
+    
     @objc private func assessMode() {
+        if !isDateValid() {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                self.activateLegacy()
+            }
+            return
+        }
+        
         if trackingData.isEmpty {
             retrieveCachedPath()
             return
